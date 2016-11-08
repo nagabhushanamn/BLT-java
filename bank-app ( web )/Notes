@@ -1,0 +1,19 @@
+
+
+
+Spring's bean lifecycle
+
+Init-phase:-
+
+ 1. Bean definitions from XML(s) will get load into BeanFactory
+ 2. BFPP will get execute to modify bean's def
+ 
+ For each bean def
+ 
+ 3. bean instance will get create
+ 4. dependencies will get inject ( constructor/setter )
+ 5. BPP's before init-method
+ 6. bean's init
+ 7. BPP's after init-method
+ 
+ ---------------------------------------------------

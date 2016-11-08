@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<context:annotation-config />
+	<context:component-scan base-package="com.bank">
+	</context:component-scan>
+	
+	
+
+	<!-- 
+	<bean id="jdbcAccountRepo" class="com.bank.repository.JdbcAccountRepository"
+		scope="singleton">
+		<qualifier type="com.bank.annotation.RepositorySelector">
+			<attribute key="tech" value="jdbc" />
+			<attribute key="db" value="mysql" />
+		</qualifier>
+	</bean> 
+	-->
+
+	<!-- 
+	<bean id="hibAccountRepo" class="com.bank.repository.HibernateAccountRepository"
+		scope="singleton">
+		<constructor-arg ref="sessionFactory" />
+		<qualifier type="com.bank.annotation.RepositorySelector">
+			<attribute key="tech" value="hibernate" />
+			<attribute key="db" value="mysql" />
+		</qualifier>
+	</bean>
+	 -->
+
+	<!-- 
+	<bean id="txrService" class="com.bank.service.TxrServiceImpl"
+		init-method="init" destroy-method="destroy" scope="singleton">
+		<property name="accountRepository" ref="hibAccountRepo" />
+	</bean> 
+	-->
+
+
+
+
+
+</beans>

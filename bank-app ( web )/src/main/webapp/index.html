@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>bank</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body class="container" ng-app="bank">
+
+	<div class="page-header">Bank</div>
+	
+	<div class="well" ng-controller="TxrController">
+	
+		<form ng-submit="doTxr()">
+			<div>
+				<label>Amount</label>
+				<input class="form-control" ng-model="txrForm.amount">
+			</div>
+			<div>
+				<label>From</label>
+				<input class="form-control" ng-model="txrForm.fromAcc">
+			</div>
+			<div>
+				<label>To</label>
+				<input class="form-control" ng-model="txrForm.toAcc">
+			</div>
+			<button class="btn btn-primary">Txr</button>
+		</form>
+		
+		<hr/>
+		
+		<span class="badge"> {{status}} </span>
+	
+	</div>
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+	<script type="text/javascript" src="js/bank.js"></script>
+</body> 
+</html>
